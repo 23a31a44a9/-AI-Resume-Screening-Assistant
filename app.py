@@ -2268,40 +2268,21 @@ if analyze:
             "🏆 OVERALL AI",
             f"{overall_score:.2f}%",
         )
-
-    # OVERALL SCORE
-    # --------------------------------------------------------
-
-    st.markdown(
+        st.markdown(
         f"""<div class="score-card">
-
-            <div class="score-label">
-                🏆 OVERALL AI RESUME SCORE
-            </div>
-
-            <div class="score-number">
-                {overall_score:.2f}%
-            </div>
-
-            <div class="score-description">
-                40% ATS + 30% semantic similarity
-                + 30% skill relevance
-            </div>
-
+        <div class="score-label">
+        🏆 OVERALL AI RESUME SCORE
         </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.progress(
-        min(
-            100,
-            max(
-                0,
-                int(overall_score),
-            ),
-        )
-    )    
+        <div class="score-number">
+        {overall_score:.2f}%
+         </div>
+        <div class="score-description">
+        40% ATS + 30% semantic similarity
+        + 30% skill relevance
+        </div>
+        </div>""",
+       unsafe_allow_html=True,
+       )
 
     # ========================================================
     # ATS
