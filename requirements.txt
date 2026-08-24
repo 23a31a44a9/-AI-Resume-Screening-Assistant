@@ -1,0 +1,7 @@
+streamlit
+pytesseract
+Pillow
+PyMuPDF
+sentence-transformers
+torch
+reportlab
