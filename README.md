@@ -40,9 +40,9 @@ https://apwuppn9vb5j5v6ok7dy.streamlit.app/
 
 ## 👨‍💻 Author
 
-Sai Nagendra Yenugu
+**Sai Nagendra Yenugu**
 
-B.Tech – Data Science
+B.Tech – Data Science  
 Pragati Engineering College
 
 ## 📌 Project Purpose
