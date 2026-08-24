@@ -2273,8 +2273,7 @@ if analyze:
     # --------------------------------------------------------
 
     st.markdown(
-        f"""
-        <div class="score-card">
+        f"""<div class="score-card">
 
             <div class="score-label">
                 🏆 OVERALL AI RESUME SCORE
