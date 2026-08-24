@@ -63,24 +63,28 @@ st.set_page_config(
 # TESSERACT OCR CONFIGURATION
 # ============================================================
 
-# Tesseract is already installed on your laptop at this path.
-# We use the direct path, so Windows PATH is NOT required.
+import shutil
 
-TESSERACT_PATH = (
-    r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-)
+TESSERACT_PATH = shutil.which("tesseract")
 
-if os.path.exists(TESSERACT_PATH):
-
-    pytesseract.pytesseract.tesseract_cmd = (
-        TESSERACT_PATH
-    )
-
+if TESSERACT_PATH:
+    pytesseract.pytesseract.tesseract_cmd = TESSERACT_PATH
     TESSERACT_AVAILABLE = True
 
 else:
+    # Windows fallback for local development
+    WINDOWS_TESSERACT_PATH = (
+        r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+    )
 
-    TESSERACT_AVAILABLE = False
+    if os.path.exists(WINDOWS_TESSERACT_PATH):
+        pytesseract.pytesseract.tesseract_cmd = (
+            WINDOWS_TESSERACT_PATH
+        )
+        TESSERACT_AVAILABLE = True
+    else:
+        TESSERACT_AVAILABLE = False
+
 
 
 # ============================================================
