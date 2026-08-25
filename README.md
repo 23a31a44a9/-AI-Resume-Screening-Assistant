@@ -36,7 +36,7 @@ The application calculates an overall score using:
 
 ## 🌐 Live Demo
 
-https://apwuppn9vb5j5v6ok7dy.streamlit.app/
+https://ai-resume-screening-assistant-no2bgz.streamlit.app/
 
 ## 👨‍💻 Author
 
